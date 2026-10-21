@@ -56,8 +56,14 @@ python3 -m http.server 8000
 ブラウザで `http://localhost:8000/` を開きます。
 サイト内のリンクは `./` や `../` から始まる相対パスで書いているため、GitHub Pages のサブパス（`/web_site_translate_knitting_pattern_pdf/`）でもそのまま動きます。
 
-## 公開する
+## 公開
 
-1. GitHub にリポジトリを作り、このフォルダを push する
-2. リポジトリの Settings → Pages で、Source を「Deploy from a branch」、ブランチを `main`、フォルダを `/ (root)` にする
-3. 数分後に `https://azimicat.github.io/<リポジトリ名>/` で公開される
+GitHub Pages で、`main` ブランチの直下（`/ (root)`）をそのまま公開しています。
+`main` に push すると、数分後にサイトに反映されます。
+
+公開先は次の URL です。
+アカウントに独自ドメイン `www.azimicat.dev` を設定しているため、`azimicat.github.io` ではなくこのドメインの下で公開されます。
+
+```
+https://www.azimicat.dev/web_site_translate_knitting_pattern_pdf/
+```
