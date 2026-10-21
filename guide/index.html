@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>使い方 | Knitting Translator</title>
+  <meta name="description" content="Knitting Translator の API キーの登録から、PDF の翻訳と保存までの使い方です。">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&family=Playfair+Display:ital@0;1&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../">
+        <img src="../assets/img/icon.png" alt="" width="34" height="34">
+        <span>Knitting Translator</span>
+      </a>
+      <div class="header-actions">
+        <a class="label" href="https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip" data-download>Download</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="サイト内">
+    <ul>
+      <li><a href="../"><strong>Home</strong><small>トップ</small></a></li>
+      <li><a href="../install/"><strong>Install</strong><small>インストール</small></a></li>
+      <li><a href="../guide/" aria-current="page"><strong>Guide</strong><small>使い方</small></a></li>
+      <li><a href="../faq/"><strong>FAQ</strong><small>よくある質問</small></a></li>
+      <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf"><strong>GitHub</strong><small>ソースコード</small></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-head">
+      <div class="page-head-blob page-head-blob--cyan blob blob-stack" aria-hidden="true"></div>
+      <div class="container reveal">
+        <span class="label">How to use</span>
+        <h1>Guide<small>使い方</small></h1>
+        <p>API キーの登録は最初の 1 回だけです。2 回目からは PDF を入れて「翻訳を開始」を押すだけで使えます。</p>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="container prose">
+        <h2 id="api-key"><span class="label">01 / API key</span>API キーを作って登録します</h2>
+        <p>API キーは、アプリが Google の翻訳の仕組み（Gemini API）を使うための合言葉にあたる文字列です。Google アカウントがあれば無料で作れて、クレジットカードの登録はいりません。5〜10 分ほどかかります。</p>
+        <ol>
+          <li>ブラウザで <a href="https://aistudio.google.com/app/apikey">Google AI Studio の API キーのページ</a>を開き、Google アカウントでログインします。</li>
+          <li>「Create API key」（日本語の表示では「APIキーを作成」）を押します。プロジェクトを選ぶ画面が出たら、「Create API key in new project」を押します。</li>
+          <li><code>AIzaSy</code> から始まる長い文字列が表示されます。右にあるコピーのボタンを押してコピーします。</li>
+          <li>KnittingTranslator を開くと API キーの入力画面が出ます。入力欄に貼り付けて（<kbd>command</kbd> + <kbd>V</kbd>）、「保存」を押します。</li>
+        </ol>
+        <div class="callout">
+          <p>API キーは人に教えないでください。キーを知った人が使うと、その回数もあなたの 1 日の無料枠から引かれます。</p>
+        </div>
+        <p>API キーを入れ替えたいときは、「翻訳を開始」ボタンと同じ列の右端にある鍵のボタンを押します。</p>
+
+        <h2 id="translate"><span class="label">02 / Translate</span>PDF を翻訳します</h2>
+        <div class="placeholder">スクリーンショット：アプリのメイン画面（準備中）</div>
+        <ol>
+          <li>翻訳したい PDF を画面上部の枠にドラッグして入れます。枠の中の「ファイルを選択」から選んでもかまいません。</li>
+          <li>「翻訳設定」で、パターンに合わせて「棒針」か「かぎ針」を選びます。選んだほうの用語集を使って訳します。</li>
+          <li>「翻訳を開始」を押します。</li>
+        </ol>
+        <p>翻訳は 1 ページずつ進み、1 ページあたり 10〜30 秒ほどかかります。進み具合はバーで表示され、0〜90% が翻訳、90〜100% が PDF の作成です。途中でやめたいときは「キャンセル」を押します。</p>
+        <p>その日の翻訳回数に、これから翻訳する PDF のページ数を足すと 450 回を超えるときは、始める前に確認の画面が出ます。回数の数え方は<a href="../faq/#quota">よくある質問</a>にあります。</p>
+
+        <h2 id="save"><span class="label">03 / Save</span>できあがった PDF を保存します</h2>
+        <p>翻訳が終わると、画面の下に対訳 PDF のプレビューが出ます。中身を確かめて「PDFを保存...」を押し、保存先を選びます。</p>
+        <dl class="spec">
+          <div><dt>用紙</dt><dd>A4</dd></div>
+          <div><dt>並び方</dt><dd>左に英語の原文、右に日本語訳</dd></div>
+          <div><dt>区切り方</dt><dd>編み方の行は 1 文ずつ、説明の文章は段落ごとに並びます</dd></div>
+          <div><dt>文字の飾り</dt><dd>元の PDF の太字と斜体を引き継ぎます</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="next">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Next</span>
+          <h2>次に読むページ</h2>
+        </div>
+        <ul class="rows">
+          <li>
+            <a href="../faq/">
+              <span class="num">Q</span>
+              <h3>よくある質問</h3>
+              <p>料金、1 日の回数、開けないときの対処</p>
+            </a>
+          </li>
+          <li>
+            <a href="../install/">
+              <span class="num">I</span>
+              <h3>インストール</h3>
+              <p>ダウンロードから、アプリを初めて開くまで</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <svg class="footer-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 L0 40 C 300 64 620 4 980 14 C 1180 20 1330 8 1440 0 L1440 60 Z"/>
+    </svg>
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-mark">Knitting<br><em>Translator</em></p>
+        <ul class="footer-links">
+          <li><a href="../install/">Install</a></li>
+          <li><a href="../guide/">Guide</a></li>
+          <li><a href="../faq/">FAQ</a></li>
+          <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="copyright">&copy; azimicat</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

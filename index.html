@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knitting Translator</title>
+  <meta name="description" content="英語の棒針編みとかぎ針編みのパターン PDF を日本語に翻訳し、原文と日本語訳を並べた PDF を作る Mac 用アプリです。">
+  <meta property="og:title" content="Knitting Translator">
+  <meta property="og:description" content="英語の編み物パターン PDF を、原文と日本語訳を並べた PDF にする Mac 用アプリ">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/icon.png">
+  <link rel="icon" href="assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&family=Playfair+Display:ital@0;1&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./">
+        <img src="assets/img/icon.png" alt="" width="34" height="34">
+        <span>Knitting Translator</span>
+      </a>
+      <div class="header-actions">
+        <a class="label" href="https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip" data-download>Download</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="サイト内">
+    <ul>
+      <li><a href="./"><strong>Home</strong><small>トップ</small></a></li>
+      <li><a href="install/"><strong>Install</strong><small>インストール</small></a></li>
+      <li><a href="guide/"><strong>Guide</strong><small>使い方</small></a></li>
+      <li><a href="faq/"><strong>FAQ</strong><small>よくある質問</small></a></li>
+      <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf"><strong>GitHub</strong><small>ソースコード</small></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-visual">
+          <div class="hero-blob blob blob-stack" aria-hidden="true"></div>
+          <h1 class="hero-title" id="hero-title">Knitting<em>Translator</em><small>英語の編み物パターンを、<br>日本語訳つきの PDF に</small></h1>
+        </div>
+        <div class="hero-meta label">
+          <p>Mac app for knitters<br>macOS 14 Sonoma+</p>
+          <a class="scroll" href="#about">Scroll</a>
+          <p class="right"><a href="https://github.com/azimicat/translate_knitting_pattern_pdf">GitHub</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-label="アプリの紹介">
+      <div class="container intro reveal">
+        <span class="label">About</span>
+        <p class="lead">Knitting Translator は英語で書かれた棒針編みとかぎ針編みのパターン PDF を日本語に翻訳する Mac 用アプリです。原文のすぐ横に日本語訳が並ぶので、英語の略語と編み方を照らし合わせながら編み進められます。</p>
+        <div class="actions">
+          <a class="button button--primary" href="https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip" data-download>無料でダウンロード</a>
+          <a class="button button--ghost" href="guide/">使い方を見る</a>
+        </div>
+        <p class="release-meta">macOS 14 Sonoma 以降 <span data-release-meta></span></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label">Features</span>
+          <h2 id="features-title">Knitting Translator でできること</h2>
+        </div>
+
+        <article class="feature reveal">
+          <div class="feature-visual">
+            <div class="feature-blob feature-blob--orange feature-blob--sample blob blob-stack">
+              <figure class="sample" aria-label="出力される PDF の見本">
+                <div class="sample__head">
+                  <span>原文</span>
+                  <span>日本語訳</span>
+                </div>
+                <div class="sample__row">
+                  <span class="sample__en">Cast on 96 sts.</span>
+                  <span>96 目作る。</span>
+                </div>
+                <div class="sample__row">
+                  <span class="sample__en">*K2, p2; rep from * to end.</span>
+                  <span>＊表目 2、裏目 2。＊からくり返して最後まで編む。</span>
+                </div>
+                <div class="sample__row">
+                  <span class="sample__en">Work in rib until piece measures 5 cm.</span>
+                  <span>編み地が 5 cm になるまでゴム編みを続ける。</span>
+                </div>
+                <figcaption class="sample__caption">見本です。アプリが作る PDF は A4 で、左に原文、右に日本語訳が並びます。</figcaption>
+              </figure>
+            </div>
+            <svg class="curve-label" viewBox="0 0 200 200" aria-hidden="true">
+              <path id="curve-side" d="M 6 100 A 94 94 0 0 1 100 6" fill="none"/>
+              <text><textPath href="#curve-side">Side by side</textPath></text>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <span class="label">01 / Side by side</span>
+            <h3>原文のとなりに日本語訳が並びます</h3>
+            <p>A4 の PDF の左に英語の原文、右に日本語訳が並びます。元の PDF の太字や斜体も引き継ぎます。</p>
+            <a class="arrow-link label" href="guide/#save">PDF の仕様を見る</a>
+          </div>
+        </article>
+
+        <article class="feature feature--reverse reveal">
+          <div class="feature-visual">
+            <div class="feature-blob feature-blob--cyan blob-stack">
+              <p class="glyph">k2tog<small>左上 2 目一度</small>sc<small>細編み</small></p>
+            </div>
+            <svg class="curve-label" viewBox="0 0 200 200" aria-hidden="true">
+              <path id="curve-glossary" d="M 6 100 A 94 94 0 0 1 100 6" fill="none"/>
+              <text><textPath href="#curve-glossary">Glossary</textPath></text>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <span class="label">02 / Glossary</span>
+            <h3>棒針とかぎ針で用語集を使い分けます</h3>
+            <p>k2tog（左上 2 目一度）や sc（細編み）のような略語は、選んだモードの用語集をもとに、日本語の編み方の名前に置き換えます。</p>
+            <a class="arrow-link label" href="guide/#translate">モードの選び方を見る</a>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-visual">
+            <div class="feature-blob feature-blob--green blob-stack">
+              <p class="glyph">&yen;0<small>翻訳にかかる料金</small></p>
+            </div>
+            <svg class="curve-label" viewBox="0 0 200 200" aria-hidden="true">
+              <path id="curve-free" d="M 6 100 A 94 94 0 0 1 100 6" fill="none"/>
+              <text><textPath href="#curve-free">Free to use</textPath></text>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <span class="label">03 / Free</span>
+            <h3>料金はかかりません</h3>
+            <p>翻訳には Google の Gemini API の無料枠を使います。用意するのは無料で作れる API キーだけで、クレジットカードの登録はいりません。</p>
+            <a class="arrow-link label" href="guide/#api-key">API キーの作り方を見る</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="label">How to start</span>
+          <h2 id="steps-title">3 ステップで使い始められます</h2>
+        </div>
+        <ol class="rows reveal">
+          <li>
+            <a href="install/">
+              <span class="num">01</span>
+              <h3>アプリをインストール</h3>
+              <p>zip をダウンロードして展開し、アプリケーションフォルダに移します。</p>
+            </a>
+          </li>
+          <li>
+            <a href="guide/#api-key">
+              <span class="num">02</span>
+              <h3>API キーを登録</h3>
+              <p>Google AI Studio で無料の API キーを作り、アプリに貼り付けます。</p>
+            </a>
+          </li>
+          <li>
+            <a href="guide/#translate">
+              <span class="num">03</span>
+              <h3>PDF を翻訳</h3>
+              <p>PDF をドロップしてモードを選び、「翻訳を開始」を押します。</p>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section download" aria-labelledby="download-title">
+      <div class="container reveal">
+        <span class="label">Download</span>
+        <h2 class="download-title" id="download-title">For your <em>Mac</em></h2>
+        <p>macOS 14 Sonoma 以降、Apple シリコン（M1 以降）を搭載した Mac で動きます。</p>
+        <div class="actions">
+          <a class="button button--primary" href="https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip" data-download>KnittingTranslator.zip をダウンロード</a>
+        </div>
+        <p class="note">このアプリは Apple の公証を受けていないため、初めて開くときに macOS の警告が出ます。開き方は<a href="install/#first-launch">インストールのページ</a>にあります。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <svg class="footer-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 L0 40 C 300 64 620 4 980 14 C 1180 20 1330 8 1440 0 L1440 60 Z"/>
+    </svg>
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-mark">Knitting<br><em>Translator</em></p>
+        <ul class="footer-links">
+          <li><a href="install/">Install</a></li>
+          <li><a href="guide/">Guide</a></li>
+          <li><a href="faq/">FAQ</a></li>
+          <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="copyright">&copy; azimicat</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/release.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>よくある質問 | Knitting Translator</title>
+  <meta name="description" content="Knitting Translator の料金、翻訳回数の上限、プライバシー、開けないときの対処についての質問と答えです。">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&family=Playfair+Display:ital@0;1&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../">
+        <img src="../assets/img/icon.png" alt="" width="34" height="34">
+        <span>Knitting Translator</span>
+      </a>
+      <div class="header-actions">
+        <a class="label" href="https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip" data-download>Download</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="サイト内">
+    <ul>
+      <li><a href="../"><strong>Home</strong><small>トップ</small></a></li>
+      <li><a href="../install/"><strong>Install</strong><small>インストール</small></a></li>
+      <li><a href="../guide/"><strong>Guide</strong><small>使い方</small></a></li>
+      <li><a href="../faq/" aria-current="page"><strong>FAQ</strong><small>よくある質問</small></a></li>
+      <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf"><strong>GitHub</strong><small>ソースコード</small></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-head">
+      <div class="page-head-blob page-head-blob--green blob blob-stack" aria-hidden="true"></div>
+      <div class="container reveal">
+        <span class="label">Questions</span>
+        <h1>FAQ<small>よくある質問</small></h1>
+        <p>料金、翻訳できる回数、PDF の送り先、アプリが開けないときの対処をまとめています。</p>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="container prose faq">
+        <div class="faq-group">
+          <h2><span class="label">Price</span>料金と回数</h2>
+
+          <details id="price">
+            <summary>お金はかかりますか？</summary>
+            <div class="answer">
+              <p>かかりません。アプリは無料で、翻訳には Google の Gemini API の無料枠を使います。Google AI Studio で支払い方法を登録していなければ、無料枠を使い切っても請求は発生せず、その日の翻訳ができなくなるだけです。</p>
+            </div>
+          </details>
+
+          <details id="quota">
+            <summary>1 日に何ページまで翻訳できますか？</summary>
+            <div class="answer">
+              <p>1 ページの翻訳で、Gemini API を 1 回使います。アプリは 1 日 500 回を上限の目安として数え、その日の回数が 450 回を超えそうになると、翻訳を始める前に確認の画面を出します。回数は Mac の時計で毎日 0 時に 0 に戻ります。</p>
+              <p>Google 側の実際の上限は Google の都合で変わることがあります。いまの上限は Google AI Studio で確かめられます。</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-group">
+          <h2><span class="label">Translation</span>翻訳について</h2>
+
+          <details id="scanned">
+            <summary>翻訳できない PDF はありますか？</summary>
+            <div class="answer">
+              <p>紙をスキャンしただけの PDF のように、文字が画像になっていて選択できない PDF は翻訳できません。PDF を開いて、文字をドラッグで選択できるかどうかで見分けられます。</p>
+            </div>
+          </details>
+
+          <details id="accuracy">
+            <summary>翻訳はそのまま信じて編んでも大丈夫ですか？</summary>
+            <div class="answer">
+              <p>機械による翻訳なので、目数や段数、記号を取り違えることがあります。原文と訳が左右に並んでいるので、数字や略語は原文と照らし合わせてから編んでください。</p>
+            </div>
+          </details>
+
+          <details id="slow">
+            <summary>翻訳が始まらない、または途中で止まります</summary>
+            <div class="answer">
+              <ul>
+                <li>インターネットに接続しているか確かめてください。</li>
+                <li>API キーを貼り付けるときに、前後に余分な文字が入っていないか確かめてください。鍵のボタンから入れ直せます。</li>
+                <li>その日の無料枠を使い切っている場合は、翌日まで翻訳できません。</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-group">
+          <h2><span class="label">Privacy</span>プライバシーと著作権</h2>
+
+          <details id="privacy">
+            <summary>PDF や API キーはどこに送られますか？</summary>
+            <div class="answer">
+              <ul>
+                <li>API キーは使っている Mac の中にだけ保存されます。</li>
+                <li>PDF は 1 ページずつ、翻訳のために Google の Gemini API に送られます。アプリの作者に送られるものはありません。</li>
+                <li>Google の規約では、無料枠で送った内容を Google がサービスの改善に使う場合があるとされています。人に見せたくない内容を含む PDF は翻訳しないでください。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details id="copyright">
+            <summary>翻訳した PDF を人に渡してもいいですか？</summary>
+            <div class="answer">
+              <p>販売されている編み物パターンには、作者が個人で使うことを条件にしているものがよくあります。翻訳した PDF を人に渡したり公開したりする前に、パターンの利用条件を確かめてください。</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-group">
+          <h2><span class="label">Install</span>インストールと動作環境</h2>
+
+          <details id="damaged">
+            <summary>「壊れているため開けません」と表示されて開けません</summary>
+            <div class="answer">
+              <p>macOS がインターネットから入手したアプリに付ける印が原因で、この表示が出ることがあります。このサイトか GitHub からダウンロードしたアプリであれば、ターミナルで次のコマンドを実行すると印が外れ、開けるようになります。</p>
+              <p><code>xattr -dr com.apple.quarantine /Applications/KnittingTranslator.app</code></p>
+              <p>アプリケーションフォルダ以外に置いている場合は、<code>/Applications/KnittingTranslator.app</code> の部分を置いた場所に書き換えてください。</p>
+            </div>
+          </details>
+
+          <details id="intel">
+            <summary>Intel プロセッサの Mac で使えますか？</summary>
+            <div class="answer">
+              <p>いま配布しているアプリは、Apple シリコン（M1 以降）を搭載した Mac 向けです。Intel プロセッサの Mac では動きません。</p>
+            </div>
+          </details>
+
+          <details id="windows">
+            <summary>Windows や iPhone で使えますか？</summary>
+            <div class="answer">
+              <p>使えません。Knitting Translator は Mac 専用のアプリです。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="next">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Contact</span>
+          <h2>解決しないとき</h2>
+        </div>
+        <ul class="rows">
+          <li>
+            <a href="https://github.com/azimicat/translate_knitting_pattern_pdf/issues">
+              <span class="num">?</span>
+              <h3>GitHub の Issues で質問する</h3>
+              <p>質問を書き込むには GitHub のアカウントが必要です。</p>
+            </a>
+          </li>
+          <li>
+            <a href="../guide/">
+              <span class="num">G</span>
+              <h3>使い方に戻る</h3>
+              <p>API キーの登録、翻訳、保存のしかた</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <svg class="footer-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 L0 40 C 300 64 620 4 980 14 C 1180 20 1330 8 1440 0 L1440 60 Z"/>
+    </svg>
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-mark">Knitting<br><em>Translator</em></p>
+        <ul class="footer-links">
+          <li><a href="../install/">Install</a></li>
+          <li><a href="../guide/">Guide</a></li>
+          <li><a href="../faq/">FAQ</a></li>
+          <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="copyright">&copy; azimicat</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

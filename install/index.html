@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>インストール | Knitting Translator</title>
+  <meta name="description" content="Knitting Translator をダウンロードして、初めて開くまでの手順です。">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&family=Playfair+Display:ital@0;1&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../">
+        <img src="../assets/img/icon.png" alt="" width="34" height="34">
+        <span>Knitting Translator</span>
+      </a>
+      <div class="header-actions">
+        <a class="label" href="https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip" data-download>Download</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu" aria-label="メニューを開く"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="サイト内">
+    <ul>
+      <li><a href="../"><strong>Home</strong><small>トップ</small></a></li>
+      <li><a href="../install/" aria-current="page"><strong>Install</strong><small>インストール</small></a></li>
+      <li><a href="../guide/"><strong>Guide</strong><small>使い方</small></a></li>
+      <li><a href="../faq/"><strong>FAQ</strong><small>よくある質問</small></a></li>
+      <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf"><strong>GitHub</strong><small>ソースコード</small></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-head">
+      <div class="page-head-blob blob blob-stack" aria-hidden="true"></div>
+      <div class="container reveal">
+        <span class="label">Step by step</span>
+        <h1>Install<small>インストール</small></h1>
+        <p>ダウンロードから、アプリを初めて開くまでの手順です。数分で終わります。</p>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="container prose">
+        <h2 id="requirements"><span class="label">Requirements</span>動作環境</h2>
+        <dl class="spec">
+          <div><dt>macOS</dt><dd>14 Sonoma 以降</dd></div>
+          <div><dt>Mac</dt><dd>Apple シリコン（M1 以降）を搭載した Mac</dd></div>
+          <div><dt>通信</dt><dd>翻訳中はインターネットに接続している必要があります</dd></div>
+          <div><dt>そのほか</dt><dd>Google AI の API キー（無料。作り方は<a href="../guide/#api-key">使い方のページ</a>にあります）</dd></div>
+        </dl>
+
+        <h2 id="download"><span class="label">01 / Download</span>ダウンロード</h2>
+        <p>下のボタンを押すと、ダウンロードフォルダに <code>KnittingTranslator.zip</code> が保存されます。</p>
+        <div class="actions actions--start">
+          <a class="button button--primary" href="https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip" data-download>KnittingTranslator.zip をダウンロード</a>
+        </div>
+        <p class="release-meta" data-release-meta></p>
+
+        <h2 id="move"><span class="label">02 / Move</span>展開してアプリケーションフォルダに移す</h2>
+        <ol>
+          <li>ダウンロードフォルダの <code>KnittingTranslator.zip</code> をダブルクリックします。同じフォルダに KnittingTranslator のアプリができます。Safari の設定によっては、ダウンロードした時点で展開まで済んでいます。</li>
+          <li>Finder でアプリケーションフォルダを開き、KnittingTranslator をドラッグして移します。</li>
+        </ol>
+
+        <h2 id="first-launch"><span class="label">03 / First launch</span>初めて開くときは、警告が出ます</h2>
+        <div class="callout">
+          <p>このアプリは Apple の公証（Apple がアプリに悪意のあるソフトウェアが含まれていないかを検査する手続き）を受けていません。そのため、インターネットから入手したアプリを初めて開くとき、macOS がアプリを止めて警告を出します。下の手順で、このアプリを開くことを許可してください。</p>
+        </div>
+
+        <h3>macOS 15 Sequoia 以降の場合</h3>
+        <ol>
+          <li>KnittingTranslator をダブルクリックします。「“KnittingTranslator”は開いていません」という画面が出たら、「完了」を押して閉じます。</li>
+          <li>アップルメニューから「システム設定」を開き、サイドバーの「プライバシーとセキュリティ」を選びます。</li>
+          <li>右側を下までスクロールすると、「セキュリティ」の欄に「“KnittingTranslator”は Mac を保護するためにブロックされました」と表示されています。その横の「このまま開く」を押します。</li>
+          <li>Mac のログインパスワードを入力します。もう一度確認の画面が出たら「このまま開く」を押します。</li>
+        </ol>
+        <div class="placeholder">スクリーンショット：「プライバシーとセキュリティ」の「このまま開く」ボタン（準備中）</div>
+
+        <h3>macOS 14 Sonoma の場合</h3>
+        <ol>
+          <li>Finder でアプリケーションフォルダを開き、<kbd>control</kbd> キーを押しながら KnittingTranslator をクリックします。</li>
+          <li>出てきたメニューから「開く」を選び、確認の画面でもう一度「開く」を押します。</li>
+        </ol>
+
+        <p>許可は 1 回で済みます。2 回目からはダブルクリックするだけで開きます。</p>
+        <p>「壊れているため開けません」と表示されて開けない場合は、<a href="../faq/#damaged">よくある質問</a>を見てください。</p>
+
+        <h2 id="next"><span class="label">04 / API key</span>API キーを登録します</h2>
+        <p>アプリを初めて開くと、API キーの入力画面が出ます。API キーの作り方と登録のしかたは、<a href="../guide/#api-key">使い方のページ</a>にあります。</p>
+      </div>
+    </section>
+
+    <section class="next">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Next</span>
+          <h2>次に読むページ</h2>
+        </div>
+        <ul class="rows">
+          <li>
+            <a href="../guide/">
+              <span class="num">G</span>
+              <h3>使い方</h3>
+              <p>API キーの登録、翻訳、保存のしかた</p>
+            </a>
+          </li>
+          <li>
+            <a href="../faq/">
+              <span class="num">Q</span>
+              <h3>よくある質問</h3>
+              <p>料金、1 日の回数、開けないときの対処</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <svg class="footer-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 L0 40 C 300 64 620 4 980 14 C 1180 20 1330 8 1440 0 L1440 60 Z"/>
+    </svg>
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-mark">Knitting<br><em>Translator</em></p>
+        <ul class="footer-links">
+          <li><a href="../install/">Install</a></li>
+          <li><a href="../guide/">Guide</a></li>
+          <li><a href="../faq/">FAQ</a></li>
+          <li><a href="https://github.com/azimicat/translate_knitting_pattern_pdf">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="copyright">&copy; azimicat</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+  <script src="../assets/js/release.js" defer></script>
+</body>
+</html>
