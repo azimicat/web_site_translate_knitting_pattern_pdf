@@ -944,6 +944,24 @@ kbd {
   padding: 24px;
 }
 
+.screenshot {
+  margin: 0 0 28px;
+}
+
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(59, 42, 31, 0.14);
+}
+
+.screenshot figcaption {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
 .spec {
   margin: 0 0 24px;
   border-top: 1px solid var(--line);
