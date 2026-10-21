@@ -1,6 +1,6 @@
 # web_site_translate_knitting_pattern_pdf
 
-Mac 用アプリ [Knitting Translator](https://github.com/azimicat/translate_knitting_pattern_pdf) を紹介し、配布するための静的サイトです。
+Mac 用アプリ Knitting Translator を紹介し、配布するための静的サイトです。
 ビルドの工程はなく、HTML と CSS をそのまま GitHub Pages で公開します。
 
 ## ファイル構成
@@ -38,11 +38,16 @@ Mac 用アプリ [Knitting Translator](https://github.com/azimicat/translate_kni
 
 ## ダウンロードのリンク
 
-アプリのリリースはコミットごとにタグが変わりますが、添付される zip の名前は `KnittingTranslator.zip` で固定です。
+アプリのソースコードのリポジトリは非公開です。
+そのため、配布する zip はこのリポジトリのリリースに置いています。
+アプリのリリース用 CI（`release.yml`）が、アプリのリリースを作るときに、同じ zip をこのリポジトリにもリリースとして上げます。
+この書き込みには、アプリのリポジトリの Secrets に登録したトークン `SITE_RELEASE_TOKEN` を使います。
+
+リリースのタグはアプリのコミットごとに変わりますが、zip の名前は `KnittingTranslator.zip` で固定です。
 そのため、ダウンロードボタンは次の URL を指しています。
 
 ```
-https://github.com/azimicat/translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip
+https://github.com/azimicat/web_site_translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip
 ```
 
 アプリ側でファイル名を変えた場合は、各 HTML の `data-download` を付けたリンクも書き換えてください。

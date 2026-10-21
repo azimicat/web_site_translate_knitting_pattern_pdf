@@ -3,7 +3,7 @@
 // 取得に失敗した場合は HTML に書いた文言のまま表示する。
 (function () {
   var API_URL =
-    "https://api.github.com/repos/azimicat/translate_knitting_pattern_pdf/releases/latest";
+    "https://api.github.com/repos/azimicat/web_site_translate_knitting_pattern_pdf/releases/latest";
 
   var targets = document.querySelectorAll("[data-release-meta]");
   if (targets.length === 0 || !window.fetch) return;
