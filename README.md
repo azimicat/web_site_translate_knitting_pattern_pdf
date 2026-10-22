@@ -39,15 +39,15 @@ Mac 用アプリ Knitting Translator を紹介し、配布するための静的�
 ## ダウンロードのリンク
 
 アプリのソースコードのリポジトリは非公開です。
-そのため、配布する zip はこのリポジトリのリリースに置いています。
-アプリのリリース用 CI（`release.yml`）が、アプリのリリースを作るときに、同じ zip をこのリポジトリにもリリースとして上げます。
+そのため、配布する dmg はこのリポジトリのリリースに置いています。
+アプリのリリース用 CI（`release.yml`）が、アプリのリリースを作るときに、同じ dmg をこのリポジトリにもリリースとして上げます。
 この書き込みには、アプリのリポジトリの Secrets に登録したトークン `SITE_RELEASE_TOKEN` を使います。
 
-リリースのタグはアプリのコミットごとに変わりますが、zip の名前は `KnittingTranslator.zip` で固定です。
+リリースのタグはアプリのコミットごとに変わりますが、dmg の名前は `KnittingTranslator.dmg` で固定です。
 そのため、ダウンロードボタンは次の URL を指しています。
 
 ```
-https://github.com/azimicat/web_site_translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.zip
+https://github.com/azimicat/web_site_translate_knitting_pattern_pdf/releases/latest/download/KnittingTranslator.dmg
 ```
 
 アプリ側でファイル名を変えた場合は、各 HTML の `data-download` を付けたリンクも書き換えてください。

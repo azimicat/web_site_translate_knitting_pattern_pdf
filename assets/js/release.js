@@ -21,7 +21,7 @@
         published.getFullYear() + " 年 " + (published.getMonth() + 1) + " 月 " + published.getDate() + " 日";
 
       var asset = (release.assets || []).filter(function (item) {
-        return item.name === "KnittingTranslator.zip";
+        return item.name === "KnittingTranslator.dmg";
       })[0];
       var size = asset ? "、" + (asset.size / 1024 / 1024).toFixed(1) + " MB" : "";
 
